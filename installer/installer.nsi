@@ -25,7 +25,7 @@ Function SelectVersion
         MessageBox MB_OK "Installing WSYS version $R0..."
     
     InstallWSYS:
-        File /r "WSYS_PACKAGE_$R0\*.*"
+        File /r "WSYS_PACKAGE\${R0}\*.*"
         CreateShortCut "$DESKTOP\WSYS.lnk" "$INSTDIR\wsys_terminal.exe"
         CreateDirectory "$SMPROGRAMS\WSYS"
         CreateShortCut "$SMPROGRAMS\WSYS\WSYS Terminal.lnk" "$INSTDIR\wsys_terminal.exe"
